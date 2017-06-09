@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+
+#credencial{
+  width         : 700px;
+  height        : 480px;
+  z-index:1; 
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top  : 2%;
+  border: solid 1px rgba(228, 228, 228, 0.97);
+}
+#credencial img{
+  bottom: 150;
+  position: relative;
+  z-index:1;
+}
+.fotocargo{
+  text-align: center;
+  font-size: 120%;
+  font-weight: bold;
+  color: white;
+  height: 25px;
+  padding-top: 2%;
+  width: auto;
+  font-family: arial;
+  }
+.logo {
+  display       : inline-block;
+  width         : 12%;
+  padding-left  : 3%; 
+
+}
+.logo img {
+   width         : 100%; 
+  }
+
+.foto{   
+     bottom: 101%;
+  left: 75%;
+  width         :25%; 
+  margin-left   : 1%;
+  position: relative;
+  z-index:2;
+ 
+}
+.foto img{
+  width: 98%;
+}
+
+.foto article img{
+width        : 90%;
+padding-left : 2%;
+height :153px;
+}
+
+#descripcion {
+width: 65%;
+position: relative;
+z-index:2;
+bottom: 130%;
+padding: 3%;
+font-size:18px;
+font-family: arial;
+}
+
+
+#descripcionEmple {
+width: 65%;
+position: relative;
+z-index:2;
+bottom: 130%;
+padding: 3%;
+padding-top: 8%;
+font-size:20px;
+
+
+font-family: arial;
+}
+
+.periodo{
+
+	text-align: center;
+	width: 120px;
+	left: 117%;
+	position: relative;
+	font-size: 24px;
+  top: 100px;
+}
+
+
+.periodoEmple{
+
+  text-align: center;
+  width: 120px;
+  left: 117%;
+  position: relative;
+  font-size: 24px;
+  top: 40px;
+}
+
+
+.titulosCarnet{
+
+font-size: 30px;
+font-weight: bold;
+}

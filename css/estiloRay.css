@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+
+			#registroClientes{
+				width:80%;
+				margin-left:auto;
+				margin-right:auto;
+					border: 3px solid rgba(0,0,0,0.1);
+					border-radius: 1%;
+					padding:1%;
+
+				}
+				#buscar_cliente_cuadro{
+					background-color: rgb(153, 204, 255);
+
+
+
+				}
+				#buscar_cliente{
+					text-align: center;
+
+				}
+				#tabla_clientes{
+
+					display: block;
+				}
+
+			#bienvenido{
+		     padding:2%;
+
+			}
+
+			#bienvenido h4{
+				text-decoration: underline;
+			}
+			.obligatorio{
+				color: red;
+				font-size:18px;
+
+				}
+
+				.no_registro{
+					text-align: center;
+					color: red;
+
+				}
+
+
+					#editar{
+						position: inherit;
+						margin: 0px;
+						display: inline-block;
+					}
+					#eliminar{
+						position: inherit;
+						margin: 0px;
+						display: inline-block;
+				 }
+
+/* CSS LOGIN O INICIO DE SESIÓN*/
+
+
+
+#logo {
+	text-align: center;
+			width: auto;
+			height:15%;
+			font-size: 28px;
+			font-weight: 600;
+			margin-bottom:2%;
+
+			 margin-top:2%;
+			}
+
+
+
+			#contenedor{
+     width:340px;
+
+	 margin-left:auto;
+	margin-right:auto;
+
+	}
+	footer {
+		text-align:center;
+       color:#333;
+	   padding:2%;
+
+		margin-right:auto;
+		margin-left:auto;
+		width:auto;
+		font-weight:bold;
+		font-style:italic;
+
+
+		}
+
+			.titulo_cuadro{
+		background-color:rgb(0, 128, 255);
+		height:40px;
+		padding-top:10px;
+		color:#FFF;
+		text-align:center;
+		margin-left: auto;
+        margin-right: auto;
+		border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+		}
+
+		.login{
+	 margin-left:auto;
+	margin-right:auto;
+   width:auto;
+   min-width:auto;
+  box-shadow : rgba(0,0,0,0.5) 0px 0px 2em; ;
+  cursor:pointer;
+margin-bottom:auto;
+border-radius:10px;
+border:rgb(0, 128, 255) solid 1px;
+font-size:16px;
+	background-color:#FFF;
+	}

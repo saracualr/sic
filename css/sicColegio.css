@@ -1,0 +1,142 @@
+#formulario{
+	background-color:#EEEEEE;
+	margin-left: auto;
+ 	margin-right: auto;
+ 	display: inline-block;;
+ 	width:85%;
+ 	vertical-align: top;
+ 	padding: 2%;
+
+           }
+
+#formCabecera{
+
+width: 100%;
+background-color:##EEEEEE;
+border: solid 1px #FFF;
+text-align: center;
+margin-top: 1%;
+height: 70px;
+
+}
+#canvas {
+	position:relative;
+	top: 200;
+
+}
+
+	#menu_lateral {
+					
+		opacity:0.9;
+		font-size:14px;
+		font-style:italic;
+		margin:0px;
+		border-left:blue solid 6px;
+		margin-bottom:1%;
+		padding-left:2px;
+		box-shadow : rgba(0,0,0,0.3) 0px 0px 5em;	
+		display:inline-block;
+		position: relative;
+		vertical-align:top;
+		text-decoration:none;
+
+
+		}
+		#menu_lateral ul {
+
+		margin:0px;
+
+		}
+	
+		#menu_lateral a{
+			text-decoration:none;
+			 color:#CCC;			
+	   }
+	   
+		#menu_lateral li {
+
+		border-radius:5%;
+		margin-bottom:2%;
+		padding:5px;
+		background-color:#000;
+		opacity:0.9;
+
+		   }
+
+		#menu_lateral , ul{
+		list-style-type: none;
+		line-height:3em;
+
+	}
+						
+						
+ #menu_lateral a:hover { 
+ 	color: orange;
+
+  }
+	#contenidoCentral{
+	display:inline-block;
+	position:relative;
+	width:78%;
+	vertical-align:top;
+	text-align:center;
+	text-align: justify;
+
+}
+
+	/*Estilos para el Login*/
+
+.login{
+	margin-left:auto;
+	margin-right:auto;
+	width:285px;
+	min-width:auto;
+	cursor:pointer;
+	margin-bottom:auto;
+	border-radius:10px;
+	border:rgb(0, 128, 255) solid 1px;
+	font-size:16px;
+	background-color:#FFF;
+	height:470px;
+	font-weight:bold;
+	}
+
+	.titulo_cuadro{
+		background-color:rgb(0, 128, 255);
+		height:45px;
+		padding-top:10px;
+		color:#FFF;
+		text-align:center;
+		margin-left: auto;
+        margin-right: auto;
+		border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+	}
+		#contenedor{
+     
+		width: auto;
+		margin-left:auto;
+		margin-right:auto;}
+
+	footer {
+		text-align:center;
+       color:#333;
+	   padding:1%;
+		margin-right:auto;
+		margin-left:auto;
+		width:auto;
+		font-weight:bold;
+		font-style:italic;
+
+
+		}
+#logo {
+	text-align: center;
+			width: auto;
+			font-size: 28px;
+			font-weight: 600;
+			margin-bottom:2px;
+			margin-top: 1%;
+			}
+
+
