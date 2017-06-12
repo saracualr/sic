@@ -52,7 +52,7 @@ if (isset($_GET['seleccionCarnet'])){
     
 <?php 
 //Valido Colegio : Siso Martinez //
-if (!empty($reg['idColeEmple']!=1) ) {
+if (!empty($reg['idColeEmple'])!=1 ) {
   
     echo "El colegio del cual desea emitir carnet,
     no tiene el diseño en nuestra base de datos.";

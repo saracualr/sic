@@ -48,19 +48,6 @@ if (isset($_GET['seleccionCarnet'])){
 
 <div class="container-fluid"> 
 
-    
-<?php 
-//Valido Colegio : Siso Martinez //
-if (!empty($reg['idColeEmple']!=1) ) {
-  
-    echo "El colegio del cual desea emitir carnet,
-    no tiene el diseño en nuestra base de datos.";
-    } else 
-
-    {
-
-    ?>
-
 <div id="credencial"> 
   <img src="../../img/fichaEmpleado.png" width="100%">
 
@@ -120,7 +107,7 @@ Unidad Educativa "Dr. José Manuel Siso Martínez"
      </div>
 
 
-<?php } } ?>
+<?php } ?>
 </div> <!-- Fin descripcion estudiante -->
 </div> <!-- FIN CREDENCIAL -->
  </div> <!-- FIN CONTAINER -->
