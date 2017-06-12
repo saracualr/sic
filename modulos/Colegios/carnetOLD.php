@@ -33,31 +33,18 @@ $enlace = conectar();
 
 if (isset($_GET['seleccionCarnet'])){
 
+  $verCarnet = $_GET['seleccionCarnet'];
 
-  $verCarnet = addslashes ($_GET['seleccionCarnet']);
-
-
-
-  $registros = mysql_query("SELECT id_estudiante,descargado,estu.id_colegio AS idColeEst,nombre,
+  $registros = mysql_query("SELECT id_estudiante,estu.id_colegio AS idColeEst,nombre,
     apellido,seccion,grado,periodo,cedula,estu.representante,apellidoRepresentante,cedulaRepresentante,
-                           estu.telefono,foto,seguro,codSeguro,cole.colegio,cole.imgCarnet from 
+                           estu.telefono,foto,seguro,codSeguro,cole.colegio from 
                            estudiantes AS estu 
                            LEFT JOIN colegios AS cole ON estu.id_colegio = cole.id_colegio
                                                       where id_estudiante= $verCarnet",
                       $enlace) or die("Problemas en el select 1:".mysql_error());
        
   $reg       = mysql_fetch_array($registros);  
-
-
-// Actualizo referencia de que se descargo el carnet
-
-if (($reg['descargado']) == 1){
-  $mensaje="Este carnet ya fue descargado. Verifique";
-
-}else{
-$rs1= mysql_query("update estudiantes set descargado= '1'
- where id_estudiante =$verCarnet",$enlace); 
-      }            
+                
        ?>
 
 
@@ -66,13 +53,15 @@ $rs1= mysql_query("update estudiantes set descargado= '1'
  <body>
 
 <div class="container-fluid"> 
-  <a id="btn-Convert-Html2Image" href="#"><h3>Descargar</h3></a> 
+   
+ <a id="btn-Convert-Html2Image" href="#"><h3>Descargar</h3></a> 
+
 <div id="credencial"> 
 
 <h2 align="center">
 <?php 
 //Valido Colegio : Siso Martinez //
-if (!isset($reg['imgCarnet'])) {
+if (!empty($reg['idColeEst']!=1) && !empty($reg['id_estudiante'])!=0 ) {
   
     echo "El colegio del cual desea emitir carnet,
     no tiene el diseño en nuestra base de datos.";
@@ -82,7 +71,7 @@ if (!isset($reg['imgCarnet'])) {
 
     ?>
 </h2>
-  <img src="disCarnet/<?php echo $reg['imgCarnet'];?>" width="100%">
+  <img src="../../img/fondo_siso3.png" width="100%">
 
       <article class="logo">
       
@@ -90,21 +79,22 @@ if (!isset($reg['imgCarnet'])) {
       <div class="cabecera"> 
 
       <p>
-      
-	  </p>
+        <!--República Bolivariana de Venezuela
+Ministerio del Poder Popular para la Educación
+Unidad Educativa "Dr. José Manuel Siso Martínez"
+      --></p>
       </div><!--fin cabecera--> 
       <div class="foto">
         
       <article><img src="estudiantes_IMG/<?php echo $reg['foto'];?>"></article>
-            
+      <!--<img src="../../img/estudiante.png">-->
+       
       </div><!--fin foto--> 
  
 
 <br>
 <br>
 <br>
-<br>
-
 
  <div id="descripcion">
    <span class="titulosCarnet"> Datos del Estudiante</span> 
@@ -160,7 +150,7 @@ if (!isset($reg['imgCarnet'])) {
           </tr>
    </div>
          <tr>
-<tr> 
+<tr> <!-- esto no se debe hacer jajaja-->
 <tr>  
 <tr>
 <tr>  
@@ -174,9 +164,8 @@ if (!isset($reg['imgCarnet'])) {
 <tr>  
 <tr>  
 <tr>  
-<tr> 
-<tr>  
-<tr> 
+ 
+
             <td width="120"><strong>Aseguradora:</strong></td>
            <td width="160"><?php  echo $reg['seguro'] ?></td>
            <td width="5"><strong>Código:</strong></td>
@@ -190,11 +179,15 @@ if (!isset($reg['imgCarnet'])) {
        
 <?php } } ?>
 
+
 </div> <!-- Fin descripcion estudiante -->
 
 </div> <!-- FIN CREDENCIAL -->
 
+
  </div> <!-- FIN CONTAINER -->
+
+
 
 <script>
 
@@ -223,6 +216,8 @@ html2canvas(element, {
 });
 
 </script>
-<h1 align="center"><?php if (isset($mensaje)) {echo $mensaje;}?></h1>
+
+
+
 </body>
 </html>
